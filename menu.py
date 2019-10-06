@@ -1,2 +1,3 @@
 print("hola")
-print("joj")
+print("joj")def funcname(parameter_list):
+    pass
