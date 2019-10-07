@@ -65,7 +65,7 @@ active = pygame.transform.scale(active,(100,100))
 starPower = pygame.transform.scale(starPower,(100,100))
 starPower2 = pygame.transform.scale(starPower2,(100,100))
 starPower3 = pygame.transform.scale(starPower3,(100,100))
-white = [255, 255, 255]
+white = [0, 0, 0]
 pantalla.fill(white)
 
 
@@ -108,6 +108,5 @@ while True:
             if(listaInteprete[7]== 1):
                 pantalla.blit(active,(400,0))
     else:
-        timer = threading.Timer(60000,starPowerdef())
-        timer.start()
+        starPowerdef()
     pygame.display.update()
