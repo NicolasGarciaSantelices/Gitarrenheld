@@ -58,6 +58,4 @@ while True:
         pantalla.blit(naranja2,(128,0))
         if(listaInteprete[7]== 1):
             pantalla.blit(active,(128,0))
-    
-    
     pygame.display.update()
