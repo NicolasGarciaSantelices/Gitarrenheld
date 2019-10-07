@@ -1,7 +1,7 @@
 
 import serial
 import pygame
-import threading
+
 arduino = serial.Serial(port='/dev/cu.usbmodem146301', baudrate=9600)
 listaInteprete = [0,0,0,0,0,0,0,0]
 pygame.init()
