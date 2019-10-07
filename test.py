@@ -7,33 +7,34 @@ listaInteprete = [0,0,0,0,0,0,0,0]
 pygame.init()
 def starPowerdef():
     pantalla.blit(starPower,(0,0))
-    pantalla.blit(starPower,(32,0))
-    pantalla.blit(starPower,(64,0))
-    pantalla.blit(starPower,(96,0))
-    pantalla.blit(starPower,(128,0))
+    pantalla.blit(starPower,(100,0))
+    pantalla.blit(starPower,(200,0))
+    pantalla.blit(starPower,(300,0))
+    pantalla.blit(starPower,(400,0))
+    
     if(listaInteprete[0]== 1):
         pantalla.blit(starPower2,(0,0))
-    if(listaInteprete[7]== 1):
-        pantalla.blit(starPower3,(0,0))
+        if(listaInteprete[7]== 1):
+            pantalla.blit(starPower3,(0,0))
     if(listaInteprete[1]== 1):
-        pantalla.blit(starPower2,(32,0))
-    if(listaInteprete[7]== 1):
-        pantalla.blit(starPower3,(32,0))
+        pantalla.blit(starPower2,(100,0))
+        if(listaInteprete[7]== 1):
+            pantalla.blit(starPower3,(100,0))
     if(listaInteprete[2]== 1):
-        pantalla.blit(starPower2,(64,0))
-    if(listaInteprete[7]== 1):
-        pantalla.blit(starPower3,(64,0))
+        pantalla.blit(starPower2,(200,0))
+        if(listaInteprete[7]== 1):
+            pantalla.blit(starPower3,(200,0))
     if(listaInteprete[3]== 1):
-        pantalla.blit(starPower2,(96,0))
-    if(listaInteprete[7]== 1):
-        pantalla.blit(starPower3,(96,0))
+        pantalla.blit(starPower2,(300,0))
+        if(listaInteprete[7]== 1):
+            pantalla.blit(starPower3,(300,0))
     if(listaInteprete[4]== 1):
-        pantalla.blit(starPower2,(128,0))
-    if(listaInteprete[7]== 1):
-        pantalla.blit(starPower3,(128,0))    
+        pantalla.blit(starPower2,(400,0))
+        if(listaInteprete[7]== 1):
+            pantalla.blit(starPower3,(400,0))    
 
 #definir tamaño ventana:
-pantalla = pygame.display.set_mode((160,32))
+pantalla = pygame.display.set_mode((500,100))
 pygame.display.set_caption('Gitarren Held')
 verde1 = pygame.image.load("verde1.png")
 verde2 = pygame.image.load("Verde2.png")
@@ -49,24 +50,41 @@ active = pygame.image.load("ON.png")
 starPower = pygame.image.load("starpower.png")
 starPower2 = pygame.image.load("starpower2.png")
 starPower3 = pygame.image.load("starpower3.png")
+#Escalamos la imagen en Pygame
+verde1 = pygame.transform.scale(verde1,(100,100))
+verde2 = pygame.transform.scale(verde2,(100,100))
+azul1 = pygame.transform.scale(azul1,(100,100))
+azul2 = pygame.transform.scale(azul2,(100,100))
+naranja1 = pygame.transform.scale(naranja1,(100,100))
+naranja2 = pygame.transform.scale(naranja2,(100,100))
+amarillo1 = pygame.transform.scale(amarillo1,(100,100))
+amarillo2 = pygame.transform.scale(amarillo2,(100,100))
+rojo1 = pygame.transform.scale(rojo1,(100,100))
+rojo2 = pygame.transform.scale(rojo2,(100,100))
+active = pygame.transform.scale(active,(100,100))
+starPower = pygame.transform.scale(starPower,(100,100))
+starPower2 = pygame.transform.scale(starPower2,(100,100))
+starPower3 = pygame.transform.scale(starPower3,(100,100))
 white = [255, 255, 255]
 pantalla.fill(white)
+
+
 while True:
     pantalla.fill(white)
     line = arduino.readline().decode('utf-8')
     print(line)
     partes = line.split(',')
-    for i in range(7):
+    for i in range(8):
         listaInteprete[i]=int(partes[i])
     for eventos in pygame.event.get():
             if eventos.type == pygame.QUIT:
                 exit()
     #verde rojo  amarillo azul naranja
     pantalla.blit(verde1,(0,0))
-    pantalla.blit(rojo1,(32,0))
-    pantalla.blit(amarillo1,(64,0))
-    pantalla.blit(azul1,(96,0))
-    pantalla.blit(naranja1,(128,0))
+    pantalla.blit(rojo1,(100,0))
+    pantalla.blit(amarillo1,(200,0))
+    pantalla.blit(azul1,(300,0))
+    pantalla.blit(naranja1,(400,0))
     #cambios de estados:
     if(listaInteprete[5]==0):
         if(listaInteprete[0]== 1):
@@ -74,21 +92,21 @@ while True:
             if(listaInteprete[7]== 1):
                 pantalla.blit(active,(0,0))
         if(listaInteprete[1]== 1):
-            pantalla.blit(rojo2,(32,0))
+            pantalla.blit(rojo2,(100,0))
             if(listaInteprete[7]== 1):
-                pantalla.blit(active,(32,0))
+                pantalla.blit(active,(100,0))
         if(listaInteprete[2]== 1):
-            pantalla.blit(amarillo2,(64,0))
+            pantalla.blit(amarillo2,(200,0))
             if(listaInteprete[7]== 1):
-                pantalla.blit(active,(64,0))
+                pantalla.blit(active,(200,0))
         if(listaInteprete[3]== 1):
-            pantalla.blit(azul2,(96,0))
+            pantalla.blit(azul2,(300,0))
             if(listaInteprete[7]== 1):
-                pantalla.blit(active,(96,0))
+                pantalla.blit(active,(300,0))
         if(listaInteprete[4]== 1):
-            pantalla.blit(naranja2,(128,0))
+            pantalla.blit(naranja2,(400,0))
             if(listaInteprete[7]== 1):
-                pantalla.blit(active,(128,0))
+                pantalla.blit(active,(400,0))
     else:
         timer = threading.Timer(60000,starPowerdef())
         timer.start()
