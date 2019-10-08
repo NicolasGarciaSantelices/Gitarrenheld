@@ -11,7 +11,7 @@ def starPowerdef():
     pantalla.blit(starPower,(200,0))
     pantalla.blit(starPower,(300,0))
     pantalla.blit(starPower,(400,0))
-    
+    print("hola")
     if(listaInteprete[0]== 1):
         pantalla.blit(starPower2,(0,0))
         if(listaInteprete[7]== 1):
