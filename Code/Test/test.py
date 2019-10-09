@@ -2,7 +2,7 @@
 import serial
 import pygame
 
-arduino = serial.Serial(port='/dev/cu.usbmodem146301', baudrate=9600)
+arduino = serial.Serial(port='/dev/cu.usbmodem142301', baudrate=9600)
 listaInteprete = [0,0,0,0,0,0,0,0]
 pygame.init()
 def starPowerdef():
@@ -36,20 +36,20 @@ def starPowerdef():
 #definir tamaño ventana:
 pantalla = pygame.display.set_mode((500,100))
 pygame.display.set_caption('Gitarren Held')
-verde1 = pygame.image.load("verde1.png")
-verde2 = pygame.image.load("Verde2.png")
-azul1 = pygame.image.load("Azul1.png")
-azul2 = pygame.image.load("Azul2.png")
-naranja1 = pygame.image.load("Naranjo1.png")
-naranja2 = pygame.image.load("Naranja2.png")
-amarillo1 = pygame.image.load("Amarillo1.png")
-amarillo2 = pygame.image.load("Amarillo2.png")
-rojo1 = pygame.image.load("Rojo.png")
-rojo2 = pygame.image.load("Rojo2.png")
-active = pygame.image.load("ON.png")
-starPower = pygame.image.load("starpower.png")
-starPower2 = pygame.image.load("starpower2.png")
-starPower3 = pygame.image.load("starpower3.png")
+verde1 = pygame.image.load("Img/Sprites/Botonera/verde1.png")
+verde2 = pygame.image.load("Img/Sprites/Botonera/Verde2.png")
+azul1 = pygame.image.load("Img/Sprites/Botonera/Azul1.png")
+azul2 = pygame.image.load("Img/Sprites/Botonera/Azul2.png")
+naranja1 = pygame.image.load("Img/Sprites/Botonera/Naranjo1.png")
+naranja2 = pygame.image.load("Img/Sprites/Botonera/Naranja2.png")
+amarillo1 = pygame.image.load("Img/Sprites/Botonera/Amarillo1.png")
+amarillo2 = pygame.image.load("Img/Sprites/Botonera/Amarillo2.png")
+rojo1 = pygame.image.load("Img/Sprites/Botonera/Rojo.png")
+rojo2 = pygame.image.load("Img/Sprites/Botonera/Rojo2.png")
+active = pygame.image.load("Img/Sprites/Botonera/ON.png")
+starPower = pygame.image.load("Img/Sprites/Botonera/starpower.png")
+starPower2 = pygame.image.load("Img/Sprites/Botonera/starpower2.png")
+starPower3 = pygame.image.load("Img/Sprites/Botonera/starpower3.png")
 #Escalamos la imagen en Pygame
 verde1 = pygame.transform.scale(verde1,(100,100))
 verde2 = pygame.transform.scale(verde2,(100,100))
